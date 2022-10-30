@@ -1,16 +1,13 @@
 
 # this is the "app/unemployment_report.py" file...
 
-from plotly.express import line
 import os
 import json
 from pprint import pprint
 
-import requests
 from dotenv import load_dotenv
-
+import requests
 from statistics import mean
-
 from plotly.express import line
 
 load_dotenv()
