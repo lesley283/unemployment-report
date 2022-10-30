@@ -35,11 +35,20 @@ Run an example script:
 python app/my_script.py
 ```
 
-Run the unemployment report:
+Run the unemployment report (json) version:
 
 ```sh
 python app/unemployment.py
 
 # or pass env variable from command line
 ALPHAVANTAGE_API_KEY="_________" python app/unemployment.py
+```
+
+Run the unemployment report (csv) version:
+
+```sh
+python app/csv_solution.py
+
+# or pass env variable from command line
+ALPHAVANTAGE_API_KEY="_________" python app/csv_solution.py
 ```
