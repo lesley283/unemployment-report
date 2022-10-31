@@ -1,7 +1,6 @@
 
 # this is the "app/unemployment_report.py" file...
 
-from statistics import mean
 import os
 import json
 from pprint import pprint
@@ -9,6 +8,7 @@ from pprint import pprint
 from dotenv import load_dotenv
 import requests
 from plotly.express import line
+from statistics import mean
 
 load_dotenv()
 
@@ -19,7 +19,7 @@ request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={
 response = requests.get(request_url)
 
 parsed_response = json.loads(response.text)
-print(type(parsed_response))
+#print(type(parsed_response))
 #pprint(parsed_response)
 
 #breakpoint()

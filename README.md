@@ -40,7 +40,7 @@ Run the unemployment report (json) version:
 ```sh
 python app/unemployment.py
 
-# or pass env variable from command line
+# or pass env var from command line
 ALPHAVANTAGE_API_KEY="_________" python app/unemployment.py
 ```
 

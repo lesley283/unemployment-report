@@ -1,5 +1,7 @@
 
 import os
+from pprint import pprint
+
 from dotenv import load_dotenv
 from pandas import read_csv
 from plotly.express import line
@@ -13,9 +15,9 @@ request_url = f"https://www.alphavantage.co/query?function=UNEMPLOYMENT&apikey={
 
 df = read_csv(request_url)
 
-print(df.head())
-print(df.columns)
-print(len(df))
+#print(df.head())
+#print(df.columns)
+#print(len(df))
 
 # Challenge A
 #
@@ -35,7 +37,7 @@ print(f"{first_row['value']}%", "as of", first_row["timestamp"])
 
 # https://stackoverflow.com/questions/11350770/filter-pandas-dataframe-by-substring-criteria
 this_year_df = df[df["timestamp"].str.contains("2022-")]
-print(this_year_df)
+#print(this_year_df)
 
 print("-------------------------")
 print("AVG UNEMPLOYMENT THIS YEAR:", f"{this_year_df['value'].mean()}%")
