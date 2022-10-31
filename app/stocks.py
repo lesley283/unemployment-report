@@ -1,15 +1,9 @@
 # this is the "app/stocks.py" file...
 
-from pandas import read_csv
-from dotenv import load_dotenv
-import os
 print("STOCKS REPORT...")
 
-
-load_dotenv() #look in the ".env" file for env vars
-
-
-API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
+from pandas import read_csv
+from app.alpha import API_KEY
 
 symbol = input("Please input a crypto symbol (default: 'NFLX'): ") or "NFLX"
 print("SYMBOL:", symbol)

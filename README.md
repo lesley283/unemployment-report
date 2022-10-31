@@ -38,23 +38,17 @@ python app/my_script.py
 Run the unemployment report (json) version:
 
 ```sh
-python app/unemployment.py
-
-# or pass env var from command line
-ALPHAVANTAGE_API_KEY="_________" python app/unemployment.py
+python -m app.unemployment
 ```
 
 Run the unemployment report (csv) version:
 
 ```sh
-python app/csv_solution.py
-
-# or pass env variable from command line
-ALPHAVANTAGE_API_KEY="_________" python app/csv_solution.py
+python -m app.csv_solution
 ```
 
 Run stocks report
 
 ```sh
-python app/stocks.py
+python -m app.stocks
 ```
