@@ -7,6 +7,14 @@ def format_usd(my_price):
     return f"${my_price:,.2f}"
 
 
+def fetch_stocks_data(symbol):
+    request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={API_KEY}&datatype=csv"
+
+    df = read_csv(request_url)
+
+    return df
+
+
 if __name__ == "__main__":
 
     print("STOCKS REPORT...")
@@ -14,9 +22,8 @@ if __name__ == "__main__":
     symbol = input("Please input a crypto symbol (default: 'NFLX'): ") or "NFLX"
     print("SYMBOL:", symbol)
 
-    request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={symbol}&apikey={API_KEY}&datatype=csv"
+    df = fetch_stocks_data(symbol)
 
-    df = read_csv(request_url)
     print(df.columns)
     print(df.head())
     #breakpoint()
