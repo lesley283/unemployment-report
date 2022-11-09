@@ -9,3 +9,5 @@ plotly
 
 # using this to find and run our tests:
 pytest
+
+sendgrid==6.6.0
