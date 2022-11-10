@@ -17,18 +17,15 @@ def send_email(subject="[Daily Briefing] This is a test", html="<p>Hello World</
 
     If recipient is not specified, sends to the admin's sender address by default.
     """
-    client = SendGridAPIClient(
-        SENDGRID_API_KEY)  # > <class 'sendgrid.sendgrid.SendGridAPIClient>
+    client = SendGridAPIClient(SENDGRID_API_KEY)  # > <class 'sendgrid.sendgrid.SendGridAPIClient>
     print("CLIENT:", type(client))
     print("SUBJECT:", subject)
     #print("HTML:", html)
 
-    message = Mail(from_email=SENDER_EMAIL_ADDRESS,
-                   to_emails=recipient_address, subject=subject, html_content=html)
+    message = Mail(from_email=SENDER_EMAIL_ADDRESS, to_emails=recipient_address, subject=subject, html_content=html)
     try:
         response = client.send(message)
-        # > <class 'python_http_client.client.Response'>
-        print("RESPONSE:", type(response))
+        print("RESPONSE:", type(response)) # > <class 'python_http_client.client.Response'>
         print(response.status_code)  # > 202 indicates SUCCESS
         return response
     except Exception as e:

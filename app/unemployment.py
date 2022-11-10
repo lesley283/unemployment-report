@@ -70,6 +70,5 @@ if __name__ == "__main__":
     dates = [d["date"] for d in data]
     rates = [float(d["value"]) for d in data]
 
-    fig = line(x=dates, y=rates, title="United States Unemployment Rate over time", labels={
-               "x": "Month", "y": "Unemployment Rate"})
+    fig = line(x=dates, y=rates, title="United States Unemployment Rate over time", labels={"x": "Month", "y": "Unemployment Rate"})
     fig.show()
