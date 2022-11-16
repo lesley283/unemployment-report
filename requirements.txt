@@ -11,7 +11,7 @@ plotly
 sendgrid==6.6.0
 
 flask # <--- ADD FOR WEB APP
-#gunicorn
+gunicorn # <--- UNCOMMENT FOR HEROKU DEPLOY; Heroku server wants to use this package to run our web app
 
 
 # using this to find and run our tests:
